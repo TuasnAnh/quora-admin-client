@@ -15,7 +15,7 @@ const passwordEmpty = document.getElementById("pass-empty");
 
 document.onload = function () {
     if (localStorage.getItem("role") === "USER_MANAGE") {
-        window.location = contextPath + "/admin/user-manage/homepage.jsp";
+        window.location = contextPath + "/admin/user-manage/homepage/homepage.jsp";
     }
     // TODO: check role in cookie
 }
@@ -96,7 +96,7 @@ function accountNotVerified() {
 
 function loginSuccess() {
     localStorage.setItem("firstLogin", true);
-    window.location = contextPath + "/admin/user-manage/homepage.jsp";
+    window.location = contextPath + "/admin/user-manage/homepage/homepage.jsp";
 }
 
 function resetStyle() {

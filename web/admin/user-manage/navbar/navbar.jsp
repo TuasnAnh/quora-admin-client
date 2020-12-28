@@ -11,25 +11,18 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <link href="../navbar/navbar.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="../admin-global-css/globalStyle.css" />
+        <link rel="stylesheet" href="../../admin-global-css/globalStyle.css" />
         <link rel="stylesheet" href="../navbar/accountExtend.css" />
         <link rel="stylesheet" href="../navbar/reportNotification.css" />
-        
+
         <title>Nav bar</title>
     </head>
     <body>
         <div class="page-header">
-            <!---------------------page notification----------------->
-            <div id="show-report-success">
-                <span>The report has been successfully sent</span>
-            </div>
-            <div id="show-add-bookmark-success" style="background-color: green">
-                <span>Added to Bookmarks</span>
-            </div>
             <!------------------page nav bar------------------->
             <div class="container">
                 <div class="header-logo">
-                    <img src="../../assets/logo-trimed.png" alt="" />
+                    <img src="../../../assets/logo-trimed.png" alt="" />
                 </div>
                 <div class="header-content">
                     <a href="../homepage/homepage.jsp" class="home header-element-wrapper">
@@ -44,19 +37,7 @@
                             <div id="home-txt" class="header-text">Home</div>
                         </div>
                     </a>
-                    <a href="../discovery/discovery.jsp" class="discovery header-element-wrapper">
-                        <div class="element-content">
-                            <div class="element-logo">
-                                <svg width="24px" height="24px" viewBox="0 0 24 24">
-                                <g stroke="none" id="discover-color" fill="#666" fill-rule="nonzero">
-                                <path id="discoversvg" d=""></path>
-                                </g>
-                                </svg>
-                            </div>
-                            <div id="discover-txt" class="header-text">Discovery</div>
-                        </div>
-                    </a>
-                    <a href="../notification/question-notification.jsp" class="notification header-element-wrapper">
+                    <a href="../report/report.jsp" class="notification header-element-wrapper">
                         <div class="element-content">
                             <div class="element-logo">
                                 <svg width="24px" height="24px" viewBox="0 0 24 24">
@@ -65,43 +46,26 @@
                                 </g>
                                 </svg>
                             </div>
-                            <div id="notice-txt" class="header-text">Notification</div>
+                            <div id="notice-txt" class="header-text">Report</div>
                         </div>
                     </a>
-                    <div class="search-field">
-                        <form autocomplete="false">
-                            <div class="form-wrapper">
-                                <div>
-                                    <div class="form-container">
-                                        <div class="form-logo">
-                                            <svg width="16px" height="16px" viewBox="0 0 24 24">
-                                            <g
-                                                stroke="#666"
-                                                stroke-width="1.5"
-                                                fill="none"
-                                                fill-rule="evenodd"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                >
-                                            <path id="searchsvg" d=""></path>
-                                            </g>
-                                            </svg>
-                                        </div>
-                                        <div class="form-text-field">
-                                            <div class="search-input-field">
-                                                <input class="search" type="text" width="100%" placeholder="Search Quora" autocomplete="chrome-off" value="" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <a href="../user/user.jsp" class="discovery header-element-wrapper">
+                        <div class="element-content">
+                            <div class="element-logo">
+                                <svg width="24px" height="24px" viewBox="0 0 24 24">
+                                <g stroke="none" id="discover-color" fill="#666" fill-rule="nonzero">
+                                <path id="discoversvg" d=""></path>
+                                </g>
+                                </svg>
                             </div>
-                        </form>
-                    </div>
+                            <div id="discover-txt" class="header-text">Users</div>
+                        </div>
+                    </a>
                     <div class="account-extend-wrapper">
                         <a class="user-wrapper" onclick="showAccountExtend()">
                             <div class="user-container">
                                 <div class="user-content">
-                                    <img class="user-image" src="../../assets/mark.jpg" alt="" />
+                                    <img class="user-image" src="../../../assets/mark.jpg" alt="" />
                                 </div>
                             </div>
                         </a>
@@ -126,11 +90,6 @@
                             </div>
                         </div>
                     </div>
-                    <button class="add-question-button">
-                        <div class="question-button-wrapper">
-                            <div class="question-button-content" onclick="showAddQuestionModel()">Add Question</div>
-                        </div>
-                    </button>
                 </div>
             </div>
         </div>
