@@ -11,10 +11,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <link href="../navbar/navbar.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="../user-global-css/globalStyle.css" />
+        <link rel="stylesheet" href="../admin-global-css/globalStyle.css" />
         <link rel="stylesheet" href="../navbar/accountExtend.css" />
         <link rel="stylesheet" href="../navbar/reportNotification.css" />
-        <script src="../user-global-js/globalScript.js" type="text/javascript"></script>
         
         <title>Nav bar</title>
     </head>
