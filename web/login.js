@@ -18,7 +18,7 @@ document.onload = function () {
         window.location = contextPath + "/admin/user-manage/homepage/homepage.jsp";
     }
     // TODO: check role in cookie
-}
+};
 
 let exit = false;
 loginButton.onclick = async function () {

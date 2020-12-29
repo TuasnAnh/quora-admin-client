@@ -17,30 +17,7 @@
         <%@include file="../navbar/navbar.jsp" %>
         <div class ="page-body">
             <div class="body-wrapper">
-                <div align="center">
-                    <table border="1" cellpadding="5">
-                        <caption><h2>List of Reports</h2></caption>
-                        <tr>
-                            <th>Answer ID</th>
-                            <th>Number of Reports   </th>
-                            <th>Actions</th>
-                        </tr>
-                        <c:forEach var="report" items="${reports}">
-                            <tr>
-                                <td><c:out value="${report.aid}" /></td>
-                            <td><c:out value="${report.count}" /></td>
-                            <td>
-                                <a href="/view?id=<c:out value='${report.aid}' />">View Answer</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="/view?id=<c:out value='${report.aid}' />">Delete Report</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="/warn?id=<c:out value='${report.aid}' />">Delete Post</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="/ban?id=<c:out value='${report.aid}' />">Ban User</a>  
-                            </td>
-                            </tr>
-                        </c:forEach>
-                    </table>
+                <div align="center" id='tableOutput'>
                 </div>  
             </div>
         </div>
@@ -48,6 +25,6 @@
     <!-----------------------  report script ----------------------->
     <script>
         setGray("report");
+        getReports();
     </script>
-    <script src="report.js" type="module"></script>
 </html>
