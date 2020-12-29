@@ -1,10 +1,12 @@
+var API_URL = 'http://localhost:8080/quora-api';
+
 async function getReports() {
     const response = await getReportsAction();
     var myHTMLStr = '<table border="1" cellpadding="5"><caption><h2>Report Management</h2></caption><tr><th>Answer ID</th><th>Number of Report</th><th>Actions</th></tr>';
     for (var i in response) {
         myHTMLStr+= '<tr>';
-        myHTMLStr+='<td>' + response[i]['aid'] + '</td><td>' + response[i]['count'] + '</td>';
-        myHTMLStr+='<td><a href="/view?id=">View Answer</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/view?id=">Delete Report</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/warn?id=">Delete Post</a></td>';
+        myHTMLStr+='<td>' + response[i]['aid'] + '</td><td>' + response[i]['number'] + '</td>';
+        myHTMLStr+='<td><a href="">View Answer</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=' + API_URL + '/deleteReport?aid=' + response[i]['aid'] + '>Delete Report</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=' + API_URL + '/deleteAnswer?aid=' + response[i]['aid'] + '>Delete Answer</a></td>';
         myHTMLStr+= '</tr>';
     }
     myHTMLStr += '</table>';
@@ -14,7 +16,7 @@ async function getReports() {
 async function getReportsAction() {
     return new Promise((resolve) => {
         const xhr = new XMLHttpRequest();
-        xhr.open("GET", `http://localhost:8080/quora-api/getReports`, true);
+        xhr.open("GET", API_URL + '/getReports', true);
         xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); // Prevent CSRF attacks
         xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
         xhr.setRequestHeader('Content-type', "application/x-www-form-urlencoded; charset=utf-8");
@@ -33,7 +35,7 @@ async function getUsers() {
     for (var i in response) {
         myHTMLStr+= '<tr>';
         myHTMLStr+='<td>' + response[i]['uid'] + '</td><td>' + response[i]['email'] + '</td><td>' + response[i]['loginStatus'] + '</td>';
-        myHTMLStr+='<td><a href="/view?id=">View Info</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/view?id=">Ban User</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/warn?id=">Delete User</a></td>';
+        myHTMLStr+='<td><a href="">View Info</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=' + API_URL + '/banUser?uid=' + response[i]['uid'] + '>Ban User</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=' + API_URL + '/deleteUser?uid=' + response[i]['uid'] + '>Delete User</a></td>';
         myHTMLStr+= '</tr>';
     }
     myHTMLStr += '</table>';
@@ -43,7 +45,7 @@ async function getUsers() {
 async function getUsersAction() {
     return new Promise((resolve) => {
         const xhr = new XMLHttpRequest();
-        xhr.open("GET", `http://localhost:8080/quora-api/getUsers`, true);
+        xhr.open("GET", API_URL + '/getUsers', true);
         xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); // Prevent CSRF attacks
         xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
         xhr.setRequestHeader('Content-type', "application/x-www-form-urlencoded; charset=utf-8");
