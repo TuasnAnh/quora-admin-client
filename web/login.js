@@ -20,6 +20,17 @@ document.onload = function () {
     // TODO: check role in cookie
 };
 
+String.prototype.escape = function () {
+    var tagsToReplace = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;'
+    };
+    return this.replace(/[&<>]/g, function (tag) {
+        return tagsToReplace[tag] || tag;
+    });
+};
+
 let exit = false;
 loginButton.onclick = async function () {
     resetStyle();
@@ -39,8 +50,8 @@ loginButton.onclick = async function () {
     }
 
     const data = {
-        email: email.value,
-        password: password.value,
+        email: email.value.escape(),
+        password: password.value.escape(),
     };
 
     const response = await loginAction(data);
@@ -96,7 +107,7 @@ function accountNotVerified() {
 
 function loginSuccess() {
     localStorage.setItem("firstLogin", true);
-    window.location = contextPath + "/admin/user-manage/homepage/homepage.jsp";
+    window.location = contextPath + "/admin/user-manage/homepage.jsp";
 }
 
 function resetStyle() {

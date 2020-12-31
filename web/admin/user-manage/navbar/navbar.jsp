@@ -10,10 +10,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-        <link href="../navbar/navbar.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="../../admin-global-css/globalStyle.css" />
-        <link rel="stylesheet" href="../navbar/accountExtend.css" />
-        <link rel="stylesheet" href="../navbar/reportNotification.css" />
+        <link href="./navbar/navbar.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="../admin-global-css/globalStyle.css" />
+        <link rel="stylesheet" href="./navbar/accountExtend.css" />
+        <link rel="stylesheet" href="./navbar/reportNotification.css" />
 
         <title>Nav bar</title>
     </head>
@@ -22,10 +22,10 @@
             <!------------------page nav bar------------------->
             <div class="container">
                 <div class="header-logo">
-                    <img src="../../../assets/logo-trimed.png" alt="" />
+                    <img src="../../assets/logo-trimed.png" alt="" />
                 </div>
                 <div class="header-content">
-                    <a href="../homepage/homepage.jsp" class="home header-element-wrapper">
+                    <a href="./homepage.jsp" class="home header-element-wrapper">
                         <div class="element-content">
                             <div class="element-logo">
                                 <svg width="24px" height="24px" viewBox="0 0 24 24">
@@ -37,7 +37,7 @@
                             <div id="home-txt" class="header-text">Home</div>
                         </div>
                     </a>
-                    <a href="../report/report.jsp" class="notification header-element-wrapper">
+                    <a href="./report.jsp" class="notification header-element-wrapper">
                         <div class="element-content">
                             <div class="element-logo">
                                 <svg width="24px" height="24px" viewBox="0 0 24 24">
@@ -49,7 +49,7 @@
                             <div id="notice-txt" class="header-text">Report</div>
                         </div>
                     </a>
-                    <a href="../user/user.jsp" class="discovery header-element-wrapper">
+                    <a href="./user.jsp" class="discovery header-element-wrapper">
                         <div class="element-content">
                             <div class="element-logo">
                                 <svg width="24px" height="24px" viewBox="0 0 24 24">
@@ -65,12 +65,12 @@
                         <a class="user-wrapper" onclick="showAccountExtend()">
                             <div class="user-container">
                                 <div class="user-content">
-                                    <img class="user-image" src="../../../assets/mark.jpg" alt="" />
+                                    <img class="user-image" src="../../assets/mark.jpg" alt="" />
                                 </div>
                             </div>
                         </a>
                         <div tabindex="-1" id="account-extend">
-                            <a class="extend-header" href="../account/account.jsp">
+                            <a class="extend-header" href="./account.jsp">
                                 <span id="extend-username">Đặng Tuấn Anh</span>
                                 <div class="extend-svg">
                                     <svg width="24px" height="24px" viewBox="0 0 24 24">
@@ -85,7 +85,7 @@
                                 </div>
                             </a>
                             <div class="extend-body">
-                                <a href="../setting/setting.jsp">Setting</a>
+                                <a href="./setting.jsp">Setting</a>
                                 <a href="#">Logout</a>
                             </div>
                         </div>
@@ -96,8 +96,8 @@
 
 
     </body>
-    <script src="../navbar/navbar.js"></script>
-    <script src="../navbar/accountExtend.js" type="text/javascript"></script>
+    <script src="./navbar/navbar.js"></script>
+    <script src="./navbar/accountExtend.js" type="text/javascript"></script>
     <script>
     </script>
 </html>

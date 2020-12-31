@@ -9,12 +9,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="user.css" rel="stylesheet" />
-        <link href="../../admin-global-css/globalStyle.css" rel="stylesheet" />
+        <link href="answer.css" rel="stylesheet" />
         <title>Admin Panel</title>
     </head>
     <body>
-        <%@include file="../navbar/navbar.jsp" %>
+        <%@include file="./navbar/navbar.jsp" %>
         <div class ="page-body">
             <div class="body-wrapper">
                 <div align="center" id="tableOutput">
@@ -23,8 +22,9 @@
         </div>
     </body>
     <!-----------------------  report script ----------------------->
+    <script src="answer.js"></script>
     <script>
-        setGray("user");
-        getUsers();
+        setGray();
+        viewAnswer();
     </script>
 </html>
