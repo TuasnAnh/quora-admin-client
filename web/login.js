@@ -15,8 +15,12 @@ const passwordEmpty = document.getElementById("pass-empty");
 
 document.onload = function () {
     if (localStorage.getItem("role") === "USER_MANAGE") {
-        window.location = contextPath + "/admin/user-manage/homepage/homepage.jsp";
+        window.location = contextPath + "/admin/user-manage/homepage.jsp";
     }
+    if (localStorage.getItem("role") === "TOPIC_MANAGE") {
+        window.location = contextPath + "/admin/topic/topic.jsp";
+    }
+    
     // TODO: check role in cookie
 };
 
@@ -67,7 +71,7 @@ loginButton.onclick = async function () {
             accountNotVerified();
             break;
         case "login success":
-            loginSuccess();
+            loginSuccess(response.role);
             break;
     }
 };
@@ -105,9 +109,14 @@ function accountNotVerified() {
     emailNotVerified.style.display = "block";
 }
 
-function loginSuccess() {
+function loginSuccess(role) {
     localStorage.setItem("firstLogin", true);
-    window.location = contextPath + "/admin/user-manage/homepage.jsp";
+    if(role === "TOPIC_MANAGE"){
+        window.location = contextPath + "/admin/topic/topic.jsp";
+    }
+    if (role === "USER_MANAGE") {
+        window.location = contextPath + "/admin/user-manage/homepage.jsp";
+    }
 }
 
 function resetStyle() {

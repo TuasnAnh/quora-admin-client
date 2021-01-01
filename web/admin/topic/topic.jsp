@@ -17,7 +17,7 @@
             <img src="image/quora-admin-logo(fix).png" alt="Logoapp" width="300" height="57"/>
             <div class="header-right">
                 <a href="#" onclick="make(event)">Topic</a>
-                <a href="#">Logout</a>
+                <a href="#" onclick="Logout()">Logout</a>
             </div>
         </div>
 
@@ -68,7 +68,7 @@
         <script type="text/javascript">
                         function make(e) {
                             window.location.reload();
-                            e.preventDefault(); 
+                            e.preventDefault();
                         }
         </script>
     </body>

@@ -1,3 +1,4 @@
+var contextPath = "http://localhost:8080/quora-admin-client";
 var API_URL = "http://localhost:8080/quora-api";
 var name_list = document.getElementById('name-list');
 var topic_name = document.getElementById('topicname');
@@ -115,4 +116,26 @@ function Delete(id) {
 }
 ;
 
+function Logout() {
+    return new Promise((resolve) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", API_URL + "/logout", true);
+        xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); // Prevent CSRF attacks
+        xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
+        xhr.setRequestHeader('Content-type', "application/x-www-form-urlencoded; charset=utf-8");
+        xhr.onreadystatechange = function (e) {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                const response = JSON.parse(xhr.responseText);
+                resolve(response);
+                console.log(response.message);
+                alert(response.message);
+
+                window.location = contextPath + "/login.jsp";
+            }
+        };
+
+        xhr.send();
+    }
+    );
+};
 
