@@ -13,7 +13,7 @@ async function viewAnswer() {
     myHTMLStr += '<td>' + answer['answerId'] + '</td><td>' + answer['userId'] + '</td><td>' + answer['content'] + '</td><td>' + answer['time'] + '</td><td>' + answer['upvote'] + '</td><td>' + answer['downvote'] + '</td>';
     myHTMLStr += '</tr>';
     myHTMLStr += '</table>';
-    myHTMLStr += '<input type="button" onclick="location.href=\'' + API_URL + '/user/delete-answer?aid=' + answer['answerId'] + '\';" value="Delete Answer"/>';
+    myHTMLStr += '<input class="deletebutton" type="button" onclick="location.href=\'' + API_URL + '/user/delete-answer?aid=' + answer['answerId'] + '\';" value="Delete Answer"/>';
     document.getElementById('tableOutput').innerHTML = myHTMLStr;
 }
 

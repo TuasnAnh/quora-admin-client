@@ -17,7 +17,6 @@
         <div class ="page-body">
             <div class="body-wrapper">
                 <div align="center">
-                    <h1>Admin Panel</h1>
                 </div>  
             </div>
         </div>

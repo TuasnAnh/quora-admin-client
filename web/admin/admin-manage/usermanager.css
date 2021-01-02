@@ -1,0 +1,133 @@
+
+
+.panel-footer .btn:hover {
+    border: 1px solid #cf030d;
+    background-color: #fff !important;
+    color: #cf030d;
+}
+
+.panel-heading {
+    color: #fff !important;
+    background-color: #cf030d !important;
+    padding: 20px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: x-large;/*add*/
+
+}
+
+.panel-body{
+    font-size: medium;
+}
+
+.panel-footer {
+    background-color: #fff !important;
+}
+
+.panel-footer .btn {
+    margin: 5px 0;
+    background-color: #cf030d;
+    color: #fff;
+}
+
+#myBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    background-color: #cf030d;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+#myBtn:hover {
+    background-color: rgb(124, 120, 120);
+}
+
+.navbar{
+    background-color: rgb(24, 24, 23);
+    font-size: medium;
+    padding: 15px;
+}
+.btn-danger{
+    background-color: #cf030d;
+    color: #fff;
+}
+
+#admin1{
+    display: block;
+}
+
+
+
+
+
+
+table {
+    position: fixed;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    top: 150px; 
+}
+table.center{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+table:hover{
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+#email11{
+    width: 40%;
+}
+
+#password11{
+    width: 20%;
+}
+
+#id11{
+    width: 5%;
+}
+
+#role11{
+    width: 15%;
+}
+
+#del-btn{
+    width: 15%;
+}
+#action11{
+    width: 15%;
+}
+
+th{
+    background-color: activeborder;
+}
+
+.listform {
+    margin-bottom: 60px;
+}
+
+h1{
+    text-align: center;
+}
+#box1{
+    display: none;
+}
+

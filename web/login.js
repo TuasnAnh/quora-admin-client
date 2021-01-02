@@ -20,7 +20,9 @@ document.onload = function () {
     if (localStorage.getItem("role") === "TOPIC_MANAGE") {
         window.location = contextPath + "/admin/topic/topic.jsp";
     }
-    
+    if (localStorage.getItem("role") === "ADMIN_MANAGE") {
+        window.location = contextPath + "/admin/admin-manage/adminmanager.jsp";
+    }
     // TODO: check role in cookie
 };
 
@@ -111,11 +113,14 @@ function accountNotVerified() {
 
 function loginSuccess(role) {
     localStorage.setItem("firstLogin", true);
-    if(role === "TOPIC_MANAGE"){
+    if (role === "TOPIC_MANAGE") {
         window.location = contextPath + "/admin/topic/topic.jsp";
     }
     if (role === "USER_MANAGE") {
         window.location = contextPath + "/admin/user-manage/homepage.jsp";
+    }
+    if (role === "ADMIN_MANAGE") {
+        window.location = contextPath + "/admin/admin-manage/adminmanager.jsp";
     }
 }
 

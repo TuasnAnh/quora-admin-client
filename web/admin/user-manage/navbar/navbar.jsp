@@ -12,8 +12,6 @@
 
         <link href="./navbar/navbar.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="../admin-global-css/globalStyle.css" />
-        <link rel="stylesheet" href="./navbar/accountExtend.css" />
-        <link rel="stylesheet" href="./navbar/reportNotification.css" />
 
         <title>Nav bar</title>
     </head>
@@ -61,43 +59,15 @@
                             <div id="discover-txt" class="header-text">Users</div>
                         </div>
                     </a>
-                    <div class="account-extend-wrapper">
-                        <a class="user-wrapper" onclick="showAccountExtend()">
-                            <div class="user-container">
-                                <div class="user-content">
-                                    <img class="user-image" src="../../assets/mark.jpg" alt="" />
-                                </div>
-                            </div>
-                        </a>
-                        <div tabindex="-1" id="account-extend">
-                            <a class="extend-header" href="./account.jsp">
-                                <span id="extend-username">Đặng Tuấn Anh</span>
-                                <div class="extend-svg">
-                                    <svg width="24px" height="24px" viewBox="0 0 24 24">
-                                    <g class="icon_svg-stroke" stroke="#666" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round">
-                                    <polyline
-                                        id="chevron"
-                                        transform="translate(12.500000, 12.002415) scale(1, -1) rotate(-90.000000) translate(-12.500000, -12.002415) "
-                                        points="5.49758463 8.50241537 12.4975846 15.5024154 19.5024154 8.50241537"
-                                        ></polyline>
-                                    </g>
-                                    </svg>
-                                </div>
-                            </a>
-                            <div class="extend-body">
-                                <a href="./setting.jsp">Setting</a>
-                                <a href="#">Logout</a>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="#" onclick="Logout()">Logout</a>
                 </div>
             </div>
         </div>
 
 
     </body>
+    <script src="./navbar/logout.js"></script>
     <script src="./navbar/navbar.js"></script>
-    <script src="./navbar/accountExtend.js" type="text/javascript"></script>
     <script>
     </script>
 </html>

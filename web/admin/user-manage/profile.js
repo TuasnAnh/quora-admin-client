@@ -7,7 +7,7 @@ async function viewUser() {
     myHTMLStr += '<td>' + user['firstName'] + '</td><td>' + user['lastName'] + '</td><td>' + user['description'] + '</td><td>' + user['credential'] + '</td><td>' + user['school'] + '</td><td>' + user['degreeType'] + '</td><td>' + user['graduationYear'] + '</td><td>' + user['location'] + '</td><td>' + user['url'] + '</td><td>' + user['registerDate'] + '</td>';
     myHTMLStr += '</tr>';
     myHTMLStr += '</table>';
-    myHTMLStr += '<input type="button" onclick="location.href=\'' + API_URL + '/user/ban-user?uid=' + user['uid'] + '\';" value="Ban User"/>';
+    myHTMLStr += '<input class="deletebutton" type="button" onclick="location.href=\'' + API_URL + '/user/ban-user?uid=' + user['uid'] + '\';" value="Ban User"/>';
     document.getElementById('tableOutput').innerHTML = myHTMLStr;
 }
 

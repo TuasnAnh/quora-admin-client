@@ -28,47 +28,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="register-wrapper">
-                                <div id="register-form" style="display: none">
-                                    <div class="form-title">
-                                        <span class="text-bold">Register</span>
-                                    </div>
-                                    <div class="row flex-column">
-                                        <label for="firstname" class="text-bold">First name</label>
-                                        <input id="firstname" type="text" class="firstname" name="firstname" placeholder="Your first name" />
-                                        <span id="fname-error">Required.  must be between 3 and 10 characters.</span>
-                                    </div>
-                                    <div class="row flex-column">
-                                        <label for="lastname" class="text-bold">Last name</label>
-                                        <input id="lastname" type="text" class="lastname" name="lastname" placeholder="Your last name" />
-                                        <span id="lname-error">Required.  must be between 3 and 10 characters.</span>
-                                    </div>
-                                    <div class="row flex-column">
-                                        <label for="email" class="text-bold">E-mail</label>
-                                        <input id="re-email" type="text" class="email" name="email" placeholder="Your email" />
-                                        <span id="re-email-empty">Email cannot be empty.</span>
-                                        <span id="re-email-existed">Existed Email.</span>
-                                        <span id="re-email-error">Must be a valid email.</span>
-                                    </div>
-                                    <div class="row flex-column">
-                                        <label for="password" class="text-bold">Password</label>
-                                        <input id="re-password" type="password" class="password" name="password" placeholder="Your password" />
-                                        <span id="re-pass-empty">Password cannot be empty.</span>
-                                        <span id="re-pass-error">Must contain at least 8 characters.</span>
-                                    </div>
-                                    <div class="register-action-field flex-row">
-                                        <a href="#" style="font-size: 13px" onclick="handleRegisterModal()">To cancel</a>
-                                        <input id="register-button" class="action-button text-bold" type="submit" value="Register" />
-                                    </div>
-                                </div>
-                                <button id="register-route-button" onclick="handleRegisterModal()">Register with your email address</button>
-                                <div id="register-priv" class="reistger-privacy">
-                                    <span
-                                        >By continuing, you acknowledge that you have accepted the <a href="#">Quora Terms of Service</a> and
-                                        <a href="#">Privacy Policy</a> .</span
-                                    >
-                                </div>
-                            </div>
                             <div class="login-wrapper">
                                 <div id="login-form">
                                     <div class="form-title">
@@ -88,7 +47,7 @@
                                         <span id="pass-empty">Password cannot be empty</span>
                                     </div>
                                     <div class="login-action-field flex-row">   
-                                        <a href="#" style="font-size: 13px">Forgot password ?</a>
+                                        <a href="admin/forgotPassword/emailPage.jsp" style="font-size: 13px">Forgot password ?</a>
                                         <input id="login-button" class="action-button text-bold" type="submit" value="To log in" />
                                     </div>
                                 </div>
@@ -118,7 +77,6 @@
 
     </script>
     <script src="login.js" type="module"></script>
-    <script src="register.js" type="module"></script>
     <script>
         let openedRegister = false;
 
