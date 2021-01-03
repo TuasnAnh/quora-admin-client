@@ -12,17 +12,18 @@ var name_list2 = document.getElementById('name-list2');
 var email_name2 = document.getElementById('email2');
 var pass2 = document.getElementById('password2');
 var admin_id = document.getElementById('adminid');
-var addbtn = document.getElementById('myBtn');
-var user_admin = document.getElementById('user-admin1');
-var topic_admin = document.getElementById('topic-admin2');
+var addbtn1 = document.getElementById('myBtn1');
+var addbtn2 = document.getElementById('myBtn2');
+//var user_admin = document.getElementById('user-admin1');
+//var topic_admin = document.getElementById('topic-admin2');
 
 var data;
 
 function AddUserAdmin() {
     data = {
         email: email_name1.value,
-        password: pass1.value,
-        role: user_admin.value
+        password: pass1.value
+//        role: user_admin.value
     };
     return new Promise((resolve) => {
         const xhr = new XMLHttpRequest();
@@ -34,8 +35,8 @@ function AddUserAdmin() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 const response = JSON.parse(xhr.responseText);
                 resolve(response);
-                console.log(response.noti);
-                alert(response.noti);
+                console.log(response.status);
+                alert(response.status);
 
                 window.location.reload();
             }
@@ -49,8 +50,8 @@ function AddUserAdmin() {
 function AddTopicAdmin() {
     data = {
         email: email_name2.value,
-        password: pass2.value,
-        role: topic_admin.value
+        password: pass2.value
+//        role: topic_admin.value
     };
     return new Promise((resolve) => {
         const xhr = new XMLHttpRequest();
@@ -62,9 +63,8 @@ function AddTopicAdmin() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 const response = JSON.parse(xhr.responseText);
                 resolve(response);
-                console.log(response.noti);
-                alert(response.noti);
-
+                console.log(response.status);
+                alert(response.status);
                 window.location.reload();
             }
         };
@@ -75,14 +75,15 @@ function AddTopicAdmin() {
 ;
 
 
-function DeleteAdmin(id) {
+function DeleteUserAdmin(id) {
     data = {
+//        email: email_name1.value,
         uid: id
-//        role: user_admin.value
+//        email: user_admin.value
     };
     return new Promise((resolve) => {
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", API_URL + "/admin/delete-admin", true);
+        xhr.open("POST", API_URL + "/admin/delete-user-admin", true);
         xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); // Prevent CSRF attacks
         xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
         xhr.setRequestHeader('Content-type', "application/x-www-form-urlencoded; charset=utf-8");
@@ -90,8 +91,32 @@ function DeleteAdmin(id) {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 const response = JSON.parse(xhr.responseText);
                 resolve(response);
-                console.log(response.noti);
-                alert(response.noti);
+                console.log(response.status);
+                alert(response.status);
+                window.location.reload();
+            }
+        };
+        xhr.send(JSON.stringify(data));
+    });
+}
+;
+
+function DeleteTopicAdmin(id) {
+    data = {
+        uid: id
+    };
+    return new Promise((resolve) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", API_URL + "/admin/delete-topic-admin", true);
+        xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); // Prevent CSRF attacks
+        xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
+        xhr.setRequestHeader('Content-type', "application/x-www-form-urlencoded; charset=utf-8");
+        xhr.onreadystatechange = function (e) {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                const response = JSON.parse(xhr.responseText);
+                resolve(response);
+                console.log(response.status);
+                alert(response.status);
                 window.location.reload();
             }
         };

@@ -1,14 +1,14 @@
 
-
+/*Table*/  
 .panel-footer .btn:hover {
-    border: 1px solid #03cf40;
+    border: 1px solid #4ec509;
     background-color: #fff !important;
     color: #cf030d;
 }
 
 .panel-heading {
     color: #fff !important;
-    background-color: #03cf40 !important;
+    background-color: #4ec509 !important;
     padding: 20px;
     border-bottom: 1px solid transparent;
     border-top-left-radius: 0px;
@@ -29,55 +29,27 @@
 
 .panel-footer .btn {
     margin: 5px 0;
-    background-color: #03cf40;
+    background-color: #4ec509;
     color: #fff;
 }
 
-#myBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    font-size: 25px;
-    border: none;
-    outline: none;
-    background-color: #03cf40;
-    color: white;
-    cursor: pointer;
-    padding: 20px;
-    border-radius: 25px;
-}
-
-#myBtn:hover {
-    background-color: rgb(124, 120, 120);
-}
-
-.navbar{
-    background-color: rgb(24, 24, 23);
-    font-size: medium;
-    padding: 15px;
-}
 .btn-danger{
-    background-color: #03cf40;
+    background-color: #4ec509;
     color: #fff;
 }
 
-#admin1{
-    display: block;
-}
-
-
-
-
-
+/* #admin1{
+display: block;
+} */
 
 table {
     position: fixed;
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 80%;
-    top: 150px; 
+    top: 200px; 
 }
+
 table.center{
     margin-left: 10%;
     margin-right: 10%;
@@ -127,7 +99,176 @@ th{
 h1{
     text-align: center;
 }
-#box2{
+#box{
     display: none;
 }
+/*Table*/
+/* #del-btn{
+margin: 15px 0;
+  background-color: #cf030d;
+  color: #fff;
+  font-size: 14px;
+} */
 
+/*navbar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #4ec509;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*navbar*/
+
+/*-----*/
+
+/* Full-width input fields */
+#email2{
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#password2 {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#id02{
+    display: none;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/*Button*/
+
+#submit2{
+    background-color: #4ec509;
+    color: #fff;
+    font-size: 16px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#submit2:hover {
+    background-color: rgb(124, 120, 120);
+}
+
+#cancel2{
+    background-color: #4ec509;
+    color: #fff;
+    font-size: 16px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#cancel2:hover {
+    background-color: rgb(124, 120, 120);
+}
+
+#myBtn2 {    
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    background-color: #4ec509;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+#myBtn2:hover {
+    background-color: rgb(124, 120, 120);
+}
+
+#genPassword2{
+    background-color: #4ec509;
+    color: #fff;
+    font-size: 16px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#genPassword2:hover{
+    background-color: rgb(124, 120, 120);
+}
+
+#del-btn2{
+    background-color: #4ec509;
+    color: #fff;
+    font-size: 16px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#del-btn2:hover{
+    background-color: rgb(124, 120, 120);
+}
+
+/*Button*/

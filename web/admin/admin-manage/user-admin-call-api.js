@@ -9,7 +9,7 @@ import {API_URL, contextPath} from "./js/global-variable.js";
 var name_list = document.getElementById('name-list1');
 var email_name= document.getElementById('email1');
 var pass = document.getElementById('password1');
-var user_admin = document.getElementById('user-admin1');
+//var user_admin = document.getElementById('user-admin1');
 
 getAllUserAdminsAction();
 
@@ -31,11 +31,11 @@ function getAllUserAdminsAction() {
                                 data += '<td class="panel-body">' + response[i].uid + '</td>';//tid=uid
                                 data += '<td class="panel-body">' + response[i].email + '</td>';
                                 data += '<td class="panel-body">' + response[i].password + '</td>';
-                                data += '<td class="panel-body" style="display:none">' + response[i].role + '</td>';
+                                //data += '<td class="panel-body" style="display:none">' + response[i].role + '</td>';
                                 data += '<td class="panel-footer">';
                                     data += '<center>';
 //                                        data += '<button class="editbutton" onclick="Edit(' + response[i].uid + ')">Edit</button> |';
-                                        data += '<button class="btn btn-lg" id="del-btn" onclick="DeleteAdmin(' + response[i].uid + ')">Delete</button>';
+                                        data += '<button type="submit" id="del-btn1" onclick="DeleteUserAdmin(' + response[i].uid + ')">Delete</button>';
                                     data += '</center>';
 
                                 data += '</td>';
