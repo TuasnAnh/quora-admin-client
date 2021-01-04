@@ -38,7 +38,7 @@
             <table id="table" class="center">
                 <thead>
                     <tr>
-                        <td colspan="5" class="panel-heading">List of User Admins</td>
+                        <td colspan="5" class="panel-heading">List of Topic Admins</td>
                     </tr>
                     <tr>
                         <th class="panel-body" id="id22">ID</th>

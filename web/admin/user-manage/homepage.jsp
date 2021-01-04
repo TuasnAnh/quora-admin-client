@@ -15,10 +15,6 @@
     <body>
         <%@include file="./navbar/navbar.jsp" %>
         <div class ="page-body">
-            <div class="body-wrapper">
-                <div align="center">
-                </div>  
-            </div>
         </div>
     </body>
     <!-----------------------  report script ----------------------->

@@ -2,9 +2,9 @@ var API_URL = 'http://localhost:38940/quora-admin-api';
 
 async function viewUser() {
     const user = await viewUserAction();
-    var myHTMLStr = '<table border="1" cellpadding="5"><caption><h2>User Info</h2></caption><tr><th>First Name</th><th>Last Name</th><th>Description</th><th>Credential</th><th>School</th><th>Degree Type</th><th>Graduation</th><th>Location</th><th>URL</th><th>Register Date</th></tr>';
+    var myHTMLStr = '<table border="1" cellpadding="5"><caption><h2>User Info</h2></caption><tr><th>First Name</th><th>Last Name</th><th>Description</th><th>Credential</th><th>School</th><th>Location</th><th>Register Date</th></tr>';
     myHTMLStr += '<tr>';
-    myHTMLStr += '<td>' + user['firstName'] + '</td><td>' + user['lastName'] + '</td><td>' + user['description'] + '</td><td>' + user['credential'] + '</td><td>' + user['school'] + '</td><td>' + user['degreeType'] + '</td><td>' + user['graduationYear'] + '</td><td>' + user['location'] + '</td><td>' + user['url'] + '</td><td>' + user['registerDate'] + '</td>';
+    myHTMLStr += '<td>' + user['firstName'] + '</td><td>' + user['lastName'] + '</td><td>' + user['description'] + '</td><td>' + user['credential'] + '</td><td>' + user['school'] + '</td><td>' + user['location'] + '</td><td>' + user['registerDate'] + '</td>';
     myHTMLStr += '</tr>';
     myHTMLStr += '</table>';
     myHTMLStr += '<input class="deletebutton" type="button" onclick="location.href=\'' + API_URL + '/user/ban-user?uid=' + user['uid'] + '\';" value="Ban User"/>';

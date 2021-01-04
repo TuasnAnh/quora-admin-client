@@ -13,7 +13,7 @@ const passToShort = document.querySelector(".password-too-short");
 const codeWrong = document.querySelector(".code-wrong");
 
 document.querySelector(".change-pass-button").onclick = function () {
-    if (passInput.value.length <= 8) {
+    if (passInput.value.length < 8) {
         codeWrong.style.display = "none";
         passToShort.style.display = "block";
         return;
