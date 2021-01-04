@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-var API_URL = "http://localhost:8080/quora-api";
+var API_URL = "http://localhost:38940/quora-admin-api";
 var name_list1 = document.getElementById('name-list1');
 var email_name1 = document.getElementById('email1');
 var pass1 = document.getElementById('password1');

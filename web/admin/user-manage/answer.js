@@ -1,4 +1,4 @@
-var API_URL = 'http://localhost:8080/quora-api';
+var API_URL = 'http://localhost:38940/quora-admin-api';
 
 async function viewAnswer() {
     const answer = await viewAnswerAction();

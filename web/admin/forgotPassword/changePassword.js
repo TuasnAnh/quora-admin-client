@@ -5,8 +5,8 @@
  */
 
 
-var API_URL = 'http://localhost:8080/quora-api';
-var contextPath = 'http://localhost:8080/quora-admin-client';
+var API_URL = 'http://localhost:38940/quora-admin-api';
+var contextPath = 'http://localhost:38940/quora-admin-client';
 const codeInput = document.querySelector(".code-input");
 const passInput = document.querySelector(".new-pass-input");
 const passToShort = document.querySelector(".password-too-short");

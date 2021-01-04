@@ -1,5 +1,5 @@
-var contextPath = "http://localhost:8080/quora-admin-client";
-var API_URL = "http://localhost:8080/quora-api";
+var contextPath = "http://localhost:38940/quora-admin-client";
+var API_URL = "http://localhost:38940/quora-admin-api";
 var name_list = document.getElementById('name-list');
 var topic_name = document.getElementById('topicname');
 var image_url = document.getElementById('thumbnail');

@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 
-var API_URL = 'http://localhost:8080/quora-api';
-var contextPath = 'http://localhost:8080/quora-admin-client';
+var API_URL = 'http://localhost:38940/quora-admin-api';
+var contextPath = 'http://localhost:38940/quora-admin-client';
 const input = document.querySelector(".email-input");
 const emailInvalid = document.querySelector(".email-invalid");
 const emailWrong = document.querySelector(".email-wrong");
